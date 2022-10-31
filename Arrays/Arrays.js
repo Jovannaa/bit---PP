@@ -43,4 +43,3 @@ Using console.log:
 
  console.log(arr [0][3]);
  console.log(arr [3][2]);
-
