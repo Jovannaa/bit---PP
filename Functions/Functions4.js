@@ -89,3 +89,56 @@ function checkSymmetric (array) {
 console.log(checkSymmetric([2, 4, -2, 7, -2, 4, 2]))
 
 
+/*
+7. Write a program that intertwines two arrays. You can assume the arrays are of the same
+length.
+Input arrays: [4, 5, 6, 2], [3, 8, 11, 9]
+Output array: [4, 3, 5, 8, 6, 11, 2, 9]
+*/
+
+function intertwinesArrays (array1, array2) {
+    var array3 = [];
+    for (i = 0; i < array1.length; i++) {
+        array3[array3.length] = array1[i];
+        array3[array3.length] = array2[i];
+    }
+    return array3
+}
+
+console.log(intertwinesArrays([4, 5, 6, 2], [3, 8, 11, 9]));
+
+/*
+8. Write a program that concatenates two arrays.
+Input arrays: [4, 5, 6, 2], [3, 8, 11, 9]
+Output array: [4, 5, 6, 2, 3, 8, 11, 9]
+*/
+
+function concatenatesArrays (array1, array2) {
+    var array3 = [];
+    for (i = 0; i < array1.length; i++) {
+        array3 = array1 + "," + array2;
+    }
+    return array3
+}
+
+console.log(concatenatesArrays([4, 5, 6, 2], [3, 8, 11, 9]))
+
+/*
+9. Write a program that deletes a given element e from the array a.
+Input: e = 2, a = [4, 6, 2, 8, 2, 2]
+Output array: [4, 6, 8]
+*/
+
+function deleteElement (array, e) {
+    var result = [];
+    for (i = 0; i < array.length; i++) {
+        if (array[i] === e) {
+            delete array[i];
+            result = array
+        }
+    }
+    return result
+}
+
+console.log(deleteElement([4, 6, 2, 8, 2, 2], 2))
+
