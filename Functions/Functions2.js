@@ -199,9 +199,24 @@ console.log(findeLastPosition("Today is a great day", "a"));
 
 /*
 7. Write a function to convert string into an array. Space in a string should be represented as “null” in new array.
-"My random string" --> ["M&", "y";, null, "r&", "a";]
-"Random" --> ["R&";, "a&";, &quot;n&quot;, &quot;d&quot;, &quot;o&quot;, &quot;m&quot;]
-/*
+"My random string" --> ["M", "y", null, "r", "a";]
+"Random" --> ["R", "a", "n", "d", "o", "m"]
+*/
+
+function stringToArray (string) {
+    var arr = [];
+
+    for (var i = 0; i < string.length; i++) {
+        if (string[i] !== " ") {
+            arr[arr.length] = string[i];
+        } else {
+            arr[arr.length] = null;
+        }
+    }
+    return arr;
+}
+var r = stringToArray ("My random string");
+console.log(r);
 
 
 
@@ -211,14 +226,32 @@ console.log(findeLastPosition("Today is a great day", "a"));
 Note: A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
 */
 
-var y = 5;
-var prime = "";
 
-    for (var i = 2; i < y; i++) {
-        if (y % i === 0) {
-            prime = "Number is not prime"
-        } else {"Number is prime"}
+function acceptsNumber (number) {
+    var result = "";
 
+    if (number > 0 && number % 1 === 0 && number % 2 === 0) {
+        result = "Number is not prime."
+    } else (number >= 1 && number/number === 1 && number % 1 === 0) 
+        result = "Number is prime."
+    
+    return result
+}
+console.log(acceptsNumber(4));
+
+/* 9. Write a function that replaces spaces in a string with provided separator. If separator is not provided, use “-” (dash) as the default separator.
+"My random string", "_" -> "My_random_string";
+"My random string", "+" -> "My+random+string";
+"My random string"; -> "My-random-string"; */
+
+function stringWithSeparator (string, separator) {
+    var result = "";
+    for (i = 0; i < string.length; i++) {
+        if (string[i] === " ") {
+            result += separator;
+        } else 
+        result += string[i];
     }
-
-console.log(prime);
+    return result
+}
+console.log(stringWithSeparator("My random string", "+"));
