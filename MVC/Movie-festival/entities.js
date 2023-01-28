@@ -1,16 +1,3 @@
-/*class Genre {
-    constructor(name) {
-        this.name = name;
-        if(!name) {
-            throw new Error("Genre required");
-        }
-    }
-    
-    getData = function() {
-        return (this.name[0] + this.name[this.name.length-1]).toUpperCase();
-    }
-} */
-
 class Movie {
     constructor (title, length, genre) {
         this.title = title;

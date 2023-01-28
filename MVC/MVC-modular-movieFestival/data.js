@@ -41,10 +41,4 @@ var dataModule = (function () {
         this.movieList.push(movie);
     };
 
-
-
-
-
-
-
 });
