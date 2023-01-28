@@ -1,0 +1,37 @@
+.body {
+    box-sizing: border-box
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    .wrapper {
+        width: 90%;
+        border: 2px solid black;
+        padding: 40px;
+        margin: auto;
+    }
+    .wrap {
+        width: 100%;
+        border: 2px solid black;
+        margin: auto;
+        padding: 10px;
+    }
+    
+    input, select {
+        width: 99%;
+        display: block;
+        height: 30px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .button {
+        color: white;
+        background-color: green;
+        border-radius: 5px;
+        border: none;
+    }
+    
+    
